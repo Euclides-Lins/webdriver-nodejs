@@ -45,12 +45,13 @@ describe('Login service test', () => {
         var login = await driver.findElement(By.id("nome_user"));
         var password = await driver.findElement(By.id("outlined-pass"));
         await login.sendKeys("nucleo_dnaz");
-    })
+    }, 10000)
+    
     it('Should required Password Field', async () => {
         await driver.get("http://200.129.168.9:21016");
         var login = await driver.findElement(By.id("nome_user"));
         var password = await driver.findElement(By.id("outlined-pass"));
         await password.sendKeys("alguma-senha-ai");
-    })
+    }, 10000)
 
 })
